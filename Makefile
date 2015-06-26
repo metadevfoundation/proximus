@@ -44,12 +44,12 @@ assets:
 .PHONY: assets
 
 gh-pages:
-		git checkout gh-pages
-		git checkout master dist
-		mv dist/* ./
-		rm -r dist	&& git commit -am "$(read)"
-		git push -u origin gh-pages
-		git checkout master;
+	  cd dist && \
+	  git init . && \
+	  git add . && \
+	  git commit -m "GH Pages"; \
+	  git push "git@github.com:metadevfoundation/proximus.git" master:gh-pages --force && \
+	  rm -rf .git
 .PHONY: gh-pages
 
 # clean
