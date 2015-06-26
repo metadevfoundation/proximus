@@ -1,0 +1,16 @@
+{
+  "name": "metadev-client",
+  "version": "1.0.0",
+  "description": "MetaDev Proxima",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "deku": "^0.4.4"
+  },
+  "devDependencies": {
+    "axios": "^0.5.4",
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.4",
+    "myth": "^1.4.0"
+  }
+}
