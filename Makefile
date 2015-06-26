@@ -43,14 +43,14 @@ assets:
 	@ cp -rvu public/* dist/
 .PHONY: assets
 
-pages:
+gh-pages:
 		git checkout gh-pages
 		git checkout master dist
 		mv -r dist/* ./
 		rm -r dist	&& git commit -am "$(read)"
 		git push origin gh-pages
 		git checkout master;
-.PHONY: pages
+.PHONY: gh-pages
 
 # clean
 clean:
