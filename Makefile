@@ -1,9 +1,9 @@
 export PATH := ./node_modules/.bin:${PATH}
 
 bin = node_modules/.bin
-src = $(shell find -path './[elements|lib]**/*' -and  -name '*.js')
+src = $(shell find -path './[elements|lib]**/*' -and	-name '*.js')
 css = $(shell find styles -name '*.css')
-
+SHELL := bash
 
 all: install build
 .PHONY: all
@@ -42,6 +42,15 @@ dist/app.js: app.js $(src) .babelrc
 assets:
 	@ cp -rvu public/* dist/
 .PHONY: assets
+
+pages:
+		git checkout gh-pages
+		git checkout master dist
+		mv -r dist/* ./
+		rm -r dist	&& git commit -am "$(read)"
+		git push origin gh-pages
+		git checkout master;
+.PHONY: pages
 
 # clean
 clean:
