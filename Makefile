@@ -46,9 +46,9 @@ assets:
 gh-pages:
 		git checkout gh-pages
 		git checkout master dist
-		mv -r dist/* ./
+		mv dist/* ./
 		rm -r dist	&& git commit -am "$(read)"
-		git push origin gh-pages
+		git push -u origin gh-pages
 		git checkout master;
 .PHONY: gh-pages
 
