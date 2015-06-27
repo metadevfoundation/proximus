@@ -1,0 +1,65 @@
+body {
+  background-color: #EEE;
+  font-family: sans-serif;
+}
+
+.hgp {
+  position: relative;
+  visibility: hidden;
+}
+
+.gh-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.proximus {
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  padding: 2.5em 10em;
+  background: #0f0321;
+  color: rgb(252, 258, 240);
+  display: inline-block;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  text-shadow: -2px -2px 5px rgb(252, 258, 240);
+}
+
+.grid {
+  overflow: visible;
+  max-width: 1200px;
+  width: 100%;
+  margin: 18em auto 0 auto;
+}
+
+.gridlet {
+  box-sizing: border-box;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.4);
+  padding: 2em;
+  color: rgb(252, 258, 240);
+  background: #0f0321;
+}
+
+.gridlet h4 {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin: 0;
+  padding: 0;
+}
+
+.gridlet p {
+  text-indent: 1em;
+  opacity: 0.9;
+  white-space: normal;
+}
