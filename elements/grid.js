@@ -1,51 +1,49 @@
 import { element } from 'deku'
-    
+
 let GridItem = {
     render(c) {
         let {state,props} = c;
         let item = props.item;
         let go = () => { document.location.href = item.url };
         return <div class="proxy" data-width="250px" data-height="250px" onClick={go}>
-                <h4>{item.name}</h4>
-                <p>{item.description}</p>
-            </div>
+          <h4>{item.name}</h4>
+          <p>{item.description}</p>
+        </div>
     }
 }
-    
+
 let Grid = {
-  async afterMount(c, el, setState) {
-    let pack = new HorizontalGridPacking(el, {        
-        padding: 10,
-        height: 250
+  async afterRender(c, el, setState) {
+    let pack = new HorizontalGridPacking(el, {
+      padding: 10,
+      height: 250
     })
-    let onResize = window.addEventListener('resize', function () {
-        pack.width = el.clientWidth
+    function onResize() {
+      pack.width = el.clientWidth
       pack.reload()
-    })
+    }
+    window.removeEventListener('resize', onResize);
+    window.addEventListener('resize', onResize);
     return {
-        pack,
-        onResize
+      pack,
+      onResize
     }
   },
-  beforeUnmount (component, el) {
-    let {props, state, id} = component
-    state.onResize();
+  beforeUnmount (c, el) {
+    window.removeEventListener('resize', c.state.onResize);
   },
   afterUpdate(c, el, setState) {
-      let { state } = c;
-      state.pack.reload()
+    let { state } = c;
+    state.pack.reload()
   },
   render(c, setState) {
     let { props } = c;
-      
-    let items = props.items.map(function(v) {
-        return <GridItem item={v} />
-    });
-    console.log(items);
-    return <div class="grid">      
-        {items}
-    </div>    
+
+    return <div class="grid">{props.children}</div>
   }
 }
 
-export default Grid;
+export default {
+  Grid,
+  GridItem 
+};

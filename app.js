@@ -1,21 +1,32 @@
-import { tree, render, element } from 'deku'
-import config from './config'
-import { Grid } from './elements/index'
+import { element, tree, render } from 'deku';
+
+import config from './config';
 import Api from './lib/api'
+import { GridItem, Grid, Ascii, GithubBanner } from './elements';
 
 /*
   App + Config
 */
 
-let app = tree();
 
-app.set(config);
 
-(async function() {
-    let response = await Api.getRaw('a23dcfd3022db00dffbc', 'gistfile1.json');
-    let { items } = response.data;
-    app.mount(
-        <Grid items={items}></Grid>
-    );
-    render(app, document.querySelector('app'));
-})()
+Api.getItems('a23dcfd3022db00dffbc', 'gistfile1.json').then((items) => {
+  let app = tree();
+
+  app.set(config);
+  let gridItems = [];
+
+  for (let item of items) {
+    gridItems.push(<GridItem item={item} />);
+  }
+  app.mount(
+    <div>
+      <Ascii />
+      <GithubBanner />
+      {gridItems}
+      <Grid>{gridItems}</Grid>
+    </div>
+  );
+
+  render(app, document.querySelector('app'));
+}).catch(e => console.error(e));
