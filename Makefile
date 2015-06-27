@@ -1,8 +1,8 @@
 export PATH := ./node_modules/.bin:${PATH}
 
 bin = node_modules/.bin
-src = $(shell find -path './[elements|lib]**/*' -and	-name '*.js')
-css = $(shell find styles -name '*.css')
+src = $(shell find -path './[elements|lib]**' -and -name '*.js')
+css = $(shell find -path './[elements|styles]**' -and -name '*.css')
 SHELL := bash
 
 all: install build

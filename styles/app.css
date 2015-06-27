@@ -20,18 +20,21 @@ body {
   left: 50%;
   top: 0;
   padding: 2.5em 10em;
-  color: #0f0321;
+  background: #0f0321;
+  color: palegoldenrod;
   border: 13px solid #0f0321;
   display: inline-block;
   transform-origin: bottom center;
   transform: translate3d(-40%, 10%, -50px) perspective(300) rotateY(7deg) rotateX(12deg);
   text-shadow: -4px -4px 2.5px rgba(173, 255, 47, 0.47);
 }
+
 .grid {
   overflow: visible;
   max-width: 700px;
   margin: 18em auto 0 auto;
 }
+
 .gridlet {
   text-transform: uppercase;
   box-sizing: border-box;
