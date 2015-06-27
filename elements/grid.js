@@ -5,7 +5,7 @@ let GridItem = {
         let {state,props} = c;
         let item = props.item;
         let go = () => { document.location.href = item.url };
-        return <div class="gridlet" data-width="250px" data-height="250px" onClick={go}>
+        return <div class="gridlet" data-width="450px" data-height="150px" onClick={go}>
           <h4>{item.name}</h4>
           <p>{item.description}</p>
         </div>
@@ -16,7 +16,7 @@ let Grid = {
   async afterRender(c, el, setState) {
     let pack = new HorizontalGridPacking(el, {
       padding: 10,
-      height: 250
+      height: 150
     })
     function onResize() {
       pack.width = el.clientWidth

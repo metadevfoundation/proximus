@@ -1,7 +1,11 @@
-:root {}
+:root {
+  --backColor: rgb(252, 258, 240);
+  --itemColor: #0f0321;
+
+}
 body {
-  background-color: palegoldenrod;
-  font-family: "Source Sans Pro", sans-serif;
+  background-color: #EEE;
+  font-family: sans-serif;
 }
 .hgp {
   position: relative;
@@ -16,40 +20,41 @@ body {
   transform: scale(0.8);
 }
 .proximus {
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.4);
   position: absolute;
   left: 50%;
   top: 0;
   padding: 2.5em 10em;
-  background: #0f0321;
-  color: palegoldenrod;
-  border: 13px solid #0f0321;
+  background: var(--itemColor);
+  color: var(--backColor);
   display: inline-block;
   transform-origin: bottom center;
   transform: translate3d(-40%, 10%, -50px) perspective(300) rotateY(7deg) rotateX(12deg);
-  text-shadow: -4px -4px 2.5px rgba(173, 255, 47, 0.47);
+  text-shadow: -2px -2px 5px var(--backColor);
 }
 
 .grid {
   overflow: visible;
-  max-width: 700px;
+  max-width: 1200px;
+  width: 100%;
   margin: 18em auto 0 auto;
 }
 
 .gridlet {
-  text-transform: uppercase;
   box-sizing: border-box;
   box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.4);
   padding: 2em;
-  color: palegoldenrod;
-  background: #0f0321;
+  color: var(--backColor);
+  background: var(--itemColor);
 }
 .gridlet h4 {
-  opacity: 0.8;
+  font-size: 1.2rem;
+  opacity: 0.9;
   margin: 0;
   padding: 0;
 }
 .gridlet p {
   text-indent: 1em;
-  opacity: 0.8;
-  white-space: no-wrap;
+  opacity: 0.9;
+  white-space: normal;
 }

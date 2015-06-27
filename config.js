@@ -1,3 +1,2 @@
-export default {
-	stripe_pk: process.env.STRIPE_PK
-}
+let config = {};
+export default config;

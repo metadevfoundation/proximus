@@ -21,8 +21,9 @@ Api.getItems('a23dcfd3022db00dffbc', 'gistfile1.json').then((items) => {
   }
   app.mount(
     <div>
-      <Ascii />
-      <GithubBanner />
+      <Ascii>
+        <GithubBanner />
+      </Ascii>
       <Grid>{gridItems}</Grid>
     </div>
   );

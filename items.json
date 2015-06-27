@@ -1,0 +1,59 @@
+{
+    "items": [
+        {
+            "name": "Quip",
+            "description": "Document and spreadsheet collaboration",
+            "url": "https://quip.com/"
+        },
+        {
+            "name": "Trello",
+            "description": "Project Management",
+            "url": "http://trello.com/"
+        },
+        {
+            "name": "Google Hangouts",
+            "description": "Our Big Chat Group, messaging",
+            "url": "http://hangouts.google.com/"
+        },
+        {
+            "name": "OSX on PC hardware",
+            "description": "Operating System",
+            "url": "http://mac-torrents.com/"
+        },
+        {
+            "name": "Omnigraffle",
+            "description": "Graphing, org charts, amazing visualizations",
+            "url": "http://omnigroup.com/"
+        },
+        {
+            "name": "Mumble",
+            "description": "Real time voice communication",
+            "url": "http://mumble.org/"
+        },
+        {
+            "name": "Rancher",
+            "description": "Docker Orchestration",
+            "url": "http://rancher.com/"
+        },
+        {
+            "name": "OneNote",
+            "description": "Organized Notetaking & meeting minutes",
+            "url": "http://onenote.com/"
+        },
+        {
+            "name": "Dukto",
+            "description": "Direct File Transfers",
+            "url": ""
+        },
+        {
+            "name": "Syncthing",
+            "description": "Sync with the central metadev  file archive",
+            "url": ""
+        },
+        {
+            "name": "GitHub",
+            "description": "Code collaboration",
+            "url": "https://github.com/metadevfoundation"
+        }
+    ]
+}
