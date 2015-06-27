@@ -23,7 +23,6 @@ Api.getItems('a23dcfd3022db00dffbc', 'gistfile1.json').then((items) => {
     <div>
       <Ascii />
       <GithubBanner />
-      {gridItems}
       <Grid>{gridItems}</Grid>
     </div>
   );

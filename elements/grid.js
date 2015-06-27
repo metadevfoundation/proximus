@@ -5,7 +5,7 @@ let GridItem = {
         let {state,props} = c;
         let item = props.item;
         let go = () => { document.location.href = item.url };
-        return <div class="proxy" data-width="250px" data-height="250px" onClick={go}>
+        return <div class="gridlet" data-width="250px" data-height="250px" onClick={go}>
           <h4>{item.name}</h4>
           <p>{item.description}</p>
         </div>
