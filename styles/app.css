@@ -28,8 +28,7 @@ body {
   background: var(--itemColor);
   color: var(--backColor);
   display: inline-block;
-  transform-origin: bottom center;
-  transform: translate3d(-40%, 10%, -50px) perspective(300) rotateY(7deg) rotateX(12deg);
+  transform: translateX(-50%);
   text-shadow: -2px -2px 5px var(--backColor);
 }
 
