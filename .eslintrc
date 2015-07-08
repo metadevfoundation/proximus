@@ -1,25 +1,20 @@
-parser: babel-eslint
-plugins:
-  - babel
-ecmaFeatures:
-  blockBindings: 1
-  forOf: 1
-  jsx: 1
-  modules: 1
-rules:
-  strict: 1
-  babel/object-shorthand: 1
-  babel/generator-star: 1
-  babel/generator-star-spacing: 1
-  indent:
-    - 2
-    - 4
-  quotes:
-    - 2
-    - single
-  linebreak-style:
-    - 2
-    - unix
-env:
-  es6: 1
-  browser: 1
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "babel"
+  ],
+  "rules": {
+    "strict": 0,
+    "babel/object-shorthand": 1,
+    "babel/generator-star": 1,
+    "babel/generator-star-spacing": 0,
+    "indent": [2, 2],
+    "linebreak-style": [2, "unix"],
+    "semi": [2, "never"],
+    "quotes": [2, "single"],
+    "no-unused-vars": [2, {"vars": "all", "args": "after-used"}],
+  },
+  "env": {
+    "browser": 1
+  }
+}

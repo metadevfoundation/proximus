@@ -20,26 +20,39 @@ body {
   transform: scale(0.8);
 }
 .proximus {
-  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.4);
-  position: absolute;
-  left: 50%;
-  top: 0;
-  padding: 2.5em 10em;
+  width: 100%;
   background: var(--itemColor);
   color: var(--backColor);
-  display: inline-block;
-  transform: translateX(-50%);
+  position: relative;
+  text-align: center;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.4);
+}
+.proximus pre {
   text-shadow: -2px -2px 5px var(--backColor);
+  padding: 2.5em 10em;
+  margin: auto;
+}
+
+.intro {
+  display: block;
+  max-width: 1200px;
+  font-size: 14pt;
+  color: var(--itemColor);
+  max-width: 1200px;
+  width: 100%;
+  margin: 2em auto 1em auto;
 }
 
 .grid {
   overflow: visible;
   max-width: 1200px;
   width: 100%;
-  margin: 18em auto 0 auto;
+  margin: 1em auto 0 auto;
 }
 
 .gridlet {
+  perspective-origin: 100px;
+  transform: perspective(250px) translateZ(-500000px);
   box-sizing: border-box;
   box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.4);
   padding: 2em;

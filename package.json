@@ -5,7 +5,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "deku": "^0.4.4"
+    "deku": "^0.4.4",
+    "shifty": "^1.5.0"
   },
   "devDependencies": {
     "axios": "^0.5.4",
