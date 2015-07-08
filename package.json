@@ -5,6 +5,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "beefy": "^2.1.5",
     "deku": "^0.4.4",
     "shifty": "^1.5.0"
   },
