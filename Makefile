@@ -10,7 +10,7 @@ all: install build
 
 install: node_modules dist/lib/flexbox.css dist/lib/browser-polyfill.min.js
 	# install
-.PHONY: install
+.PHONY: install build serve
 
 node_modules: package.json
 	# node modules
@@ -28,6 +28,10 @@ build: dist/app.js dist/app.css assets
 	# build done.
 .PHONY: build
 
+serve:
+	@$(bin)/beefy --cwd dist/
+.PHONY: serve
+
 # css
 dist/app.css: $(css)
 	# myth
@@ -36,7 +40,7 @@ dist/app.css: $(css)
 # js
 dist/app.js: app.js $(src) .babelrc
 	# browserify
-	@$(bin)/beefy -d app.js -t babelify --outfile dist/app.js
+	@$(bin)/browserify -d app.js -t babelify --outfile dist/app.js
 
 # assets
 assets:
