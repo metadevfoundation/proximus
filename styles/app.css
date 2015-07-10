@@ -7,6 +7,13 @@ body {
   background-color: #EEE;
   font-family: sans-serif;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .hgp {
   position: relative;
   visibility: hidden;
